@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #f3efe6 0%, #eaf3ea 100%);
+  color: #111111;
+}
+
+/* Hide scrollbar for horizontally-scrollable rows (filter tabs, partner logos) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
