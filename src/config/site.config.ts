@@ -50,7 +50,7 @@ const siteConfig = {
     longDescription:
       "Sharing my golf adventures from beautiful courses around the world to hidden gem golf accesory finds for golfers of all levels to enjoy and relate to!⛳️",
 
-    email: "jeffgolfing@gmail.com",
+    email: "jeffgolfsugc@gmail.com",
 
     instagramHandle: "@jeffgolfing",
     instagramUrl: "https://www.instagram.com/jeffgolfing",

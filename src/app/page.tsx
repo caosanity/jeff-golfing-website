@@ -12,17 +12,17 @@ const { profile } = siteConfig;
 
 const links = [
   {
-    icon: InstagramIcon,
-    title: "Instagram",
-    subtitle: profile.instagramHandle,
-    href: profile.instagramUrl,
-    external: true,
-  },
-  {
     icon: TikTokIcon,
     title: "TikTok",
     subtitle: profile.tiktokHandle,
     href: profile.tiktokUrl,
+    external: true,
+  },
+  {
+    icon: InstagramIcon,
+    title: "Instagram",
+    subtitle: profile.instagramHandle,
+    href: profile.instagramUrl,
     external: true,
   },
   {
