@@ -80,7 +80,7 @@ const siteConfig = {
 
   // --------------------------------------------------------------------------
   // AUDIENCE — malePercentage + femalePercentage should add up to 100.
-  // ageGroups percentages should add up to 100.
+  // ageGroups / viewerLocation / followerLocation percentages should each add up to 100.
   // --------------------------------------------------------------------------
   audience: {
     malePercentage: 82,
@@ -92,6 +92,22 @@ const siteConfig = {
       { label: "35-44", percentage: 13.2 },
       { label: "45-54", percentage: 5.5 },
       { label: "55+", percentage: 3.4 },
+    ],
+
+    viewerLocation: [
+      { label: "Canada", percentage: 41.3 },
+      { label: "United States", percentage: 28.3 },
+      { label: "Australia", percentage: 6.5 },
+      { label: "United Kingdom", percentage: 5.4 },
+      { label: "Other", percentage: 18.5 },
+    ],
+
+    followerLocation: [
+      { label: "United States", percentage: 27.3 },
+      { label: "Canada", percentage: 17.2 },
+      { label: "United Kingdom", percentage: 9.2 },
+      { label: "Australia", percentage: 4.0 },
+      { label: "Other", percentage: 42.3 },
     ],
   },
 
@@ -166,6 +182,22 @@ const siteConfig = {
       title: "Noob regrips clubs for the first time",
       image: "/tiktok-regripping.jpg",
       videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7666483507971116306",
+    },
+    // TikTok post 7
+    {
+      platform: "TikTok",
+      category: "Products",
+      title: "Look like the pros for cheap",
+      image: "/tiktok-uniqlo-polo.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7673157851979779336",
+    },
+    // TikTok post 8
+    {
+      platform: "TikTok",
+      category: "Places",
+      title: "Grayhawk Raptor: honest review",
+      image: "/tiktok-grayhawk-raptor.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7626943779404074258",
     },
   ] as FeaturedPost[],
 };
