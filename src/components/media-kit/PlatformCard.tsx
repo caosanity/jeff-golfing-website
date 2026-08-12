@@ -20,7 +20,7 @@ export default function PlatformCard({
   blobClassName: string;
 }) {
   return (
-    <div className="relative overflow-hidden bg-white rounded-3xl shadow-sm p-5">
+    <div className="animate-fade-in-up relative overflow-hidden bg-white rounded-3xl shadow-[0_16px_36px_-18px_rgba(17,17,17,0.16)] hover:shadow-[0_20px_44px_-16px_rgba(17,17,17,0.2)] transition-shadow duration-300 p-5">
       <div
         className={`pointer-events-none absolute -bottom-8 -right-8 w-32 h-32 rounded-full blur-2xl opacity-60 ${blobClassName}`}
       />

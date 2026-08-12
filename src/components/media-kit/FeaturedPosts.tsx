@@ -40,17 +40,17 @@ export default function FeaturedPosts() {
         Featured Posts
       </span>
 
-      <div className="mt-4 flex gap-2 overflow-x-auto no-scrollbar pb-1">
+      <div className="mt-4 flex gap-2 overflow-x-auto no-scrollbar scroll-fade-right pb-1">
         {FILTERS.map((filter) => {
           const isActive = filter === active;
           return (
             <button
               key={filter}
               onClick={() => setActive(filter)}
-              className={`flex-shrink-0 rounded-full px-4 py-2 text-sm font-semibold border transition-colors ${
+              className={`flex-shrink-0 rounded-full px-4 py-2 text-sm font-semibold border transition-all duration-200 ${
                 isActive
-                  ? "bg-green text-white border-green"
-                  : "bg-transparent text-muted border-gray-300"
+                  ? "bg-green text-white border-green shadow-[0_8px_18px_-8px_rgba(47,158,90,0.6)]"
+                  : "bg-transparent text-muted border-gray-300 hover:border-green/50 hover:text-green-dark"
               }`}
             >
               {filter}
@@ -62,11 +62,12 @@ export default function FeaturedPosts() {
       <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
         {posts.map((post, index) => {
           const key = `${post.platform}-${post.title}-${index}`;
-          const tileClassName = `relative aspect-[3/4] rounded-2xl overflow-hidden p-3 flex flex-col justify-between ${
+          const tileClassName = `group relative aspect-[3/4] rounded-2xl overflow-hidden p-3 flex flex-col justify-between shadow-[0_10px_24px_-14px_rgba(17,17,17,0.35)] hover:shadow-[0_16px_32px_-12px_rgba(17,17,17,0.4)] hover:-translate-y-1 transition-all duration-300 animate-fade-in-up ${
             post.image
               ? "bg-ink"
               : `bg-gradient-to-br ${FALLBACK_GRADIENT[post.platform]}`
           }`;
+          const style = { animationDelay: `${index * 60}ms` };
 
           const content = (
             <>
@@ -75,7 +76,7 @@ export default function FeaturedPosts() {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 />
               )}
               {post.image && (
@@ -83,10 +84,10 @@ export default function FeaturedPosts() {
               )}
 
               <div className="relative flex items-start justify-between">
-                <span className="bg-black/70 text-white text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
+                <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
                   {post.platform}
                 </span>
-                <span className="bg-white/90 text-green-dark text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
+                <span className="bg-white/90 backdrop-blur-sm text-green-dark text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
                   {post.category}
                 </span>
               </div>
@@ -103,7 +104,8 @@ export default function FeaturedPosts() {
                 href={post.videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${tileClassName} hover:opacity-90 transition-opacity`}
+                className={tileClassName}
+                style={style}
               >
                 {content}
               </a>
@@ -111,7 +113,7 @@ export default function FeaturedPosts() {
           }
 
           return (
-            <div key={key} className={tileClassName}>
+            <div key={key} className={tileClassName} style={style}>
               {content}
             </div>
           );
