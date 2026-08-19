@@ -72,10 +72,10 @@ const siteConfig = {
   // TIKTOK STATS
   // --------------------------------------------------------------------------
   tiktok: {
-    followers: "1,100",
+    followers: "1,120",
     totalViews: "2.4M",
-    totalLikes: "102K",
-    totalShares: "23.5K",
+    totalLikes: "104K",
+    totalShares: "23.8K",
   },
 
   // --------------------------------------------------------------------------
