@@ -27,7 +27,6 @@ export default function InsightsSection() {
               { label: "Avg views", value: instagram.avgViews },
               { label: "Avg likes", value: instagram.avgLikes },
             ]}
-            blobClassName="bg-sage"
           />
         )}
         <PlatformCard
@@ -40,7 +39,6 @@ export default function InsightsSection() {
             { label: "Total likes", value: tiktok.totalLikes },
             { label: "Total shares", value: tiktok.totalShares },
           ]}
-          blobClassName="bg-mint"
         />
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function PartnersSection() {
         Partners
       </span>
 
-      <div className="animate-fade-in-up bg-white rounded-3xl shadow-[0_16px_36px_-18px_rgba(17,17,17,0.16)] mt-4 p-6 flex flex-wrap items-center justify-start gap-10">
+      <div className="animate-fade-in-up glass-strong rounded-3xl shadow-[0_16px_36px_-18px_rgba(17,17,17,0.2)] mt-4 p-6 flex flex-wrap items-center justify-start gap-10">
         {partners.map(({ name, logo, url }) => {
           const content = logo ? (
             // eslint-disable-next-line @next/next/no-img-element

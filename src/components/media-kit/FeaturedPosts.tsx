@@ -49,8 +49,8 @@ export default function FeaturedPosts() {
               onClick={() => setActive(filter)}
               className={`flex-shrink-0 rounded-full px-4 py-2 text-sm font-semibold border transition-all duration-200 ${
                 isActive
-                  ? "bg-green text-white border-green shadow-[0_8px_18px_-8px_rgba(47,158,90,0.6)]"
-                  : "bg-transparent text-muted border-gray-300 hover:border-green/50 hover:text-green-dark"
+                  ? "bg-gradient-to-r from-green to-green-dark text-white border-transparent shadow-[0_8px_18px_-6px_rgba(47,158,90,0.65)]"
+                  : "glass-pill text-muted hover:text-green-dark hover:border-green/45"
               }`}
             >
               {filter}
@@ -84,10 +84,10 @@ export default function FeaturedPosts() {
               )}
 
               <div className="relative flex items-start justify-between">
-                <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
+                <span className="glass-dark text-white text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
                   {post.platform}
                 </span>
-                <span className="bg-white/90 backdrop-blur-sm text-green-dark text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1">
+                <span className="bg-gradient-to-r from-green to-green-dark text-white text-[10px] font-bold uppercase tracking-wide rounded-full px-2.5 py-1 shadow-[0_4px_12px_-4px_rgba(47,158,90,0.6)]">
                   {post.category}
                 </span>
               </div>

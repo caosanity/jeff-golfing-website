@@ -20,7 +20,7 @@ export default function Nav() {
     <>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="fixed top-4 left-4 z-50 w-11 h-11 rounded-full bg-white shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center transition-all duration-200"
+        className="fixed top-4 left-4 z-50 w-11 h-11 rounded-full glass-strong shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center transition-all duration-200"
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={open}
       >
@@ -49,7 +49,7 @@ export default function Nav() {
           aria-hidden="true"
         />
         <div
-          className={`relative w-64 max-w-[80%] h-full bg-white shadow-xl p-5 pt-20 flex flex-col transition-transform duration-300 ease-out ${
+          className={`relative w-64 max-w-[80%] h-full glass-strong shadow-xl p-5 pt-20 flex flex-col transition-transform duration-300 ease-out ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -72,10 +72,10 @@ export default function Nav() {
                   key={href}
                   href={href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors ${
+                  className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all duration-200 ${
                     isActive
-                      ? "bg-sage/60 text-green-dark"
-                      : "text-muted hover:bg-gray-50"
+                      ? "bg-gradient-to-r from-green to-mint text-white shadow-[0_6px_16px_-6px_rgba(47,158,90,0.6)]"
+                      : "text-muted hover:bg-sage/25"
                   }`}
                 >
                   <Icon className="w-5 h-5" />

@@ -10,7 +10,7 @@ export default function StatCard({
   tooltip?: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gray-50 hover:bg-sage/25 p-4 transition-colors duration-200">
+    <div className="glass relative overflow-hidden rounded-2xl hover:border-green/45 hover:shadow-[0_8px_20px_-10px_rgba(17,17,17,0.25)] p-4 transition-all duration-200">
       <div className="flex items-center gap-1">
         <span className="text-xs font-medium text-muted uppercase tracking-wide truncate">
           {label}

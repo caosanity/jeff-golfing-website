@@ -43,19 +43,11 @@ const links = [
 
 export default function LinksPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden flex justify-center px-4 py-12 sm:py-16">
-      <div
-        className="blob bg-sage/40 w-72 h-72 -top-16 -left-20"
-        aria-hidden="true"
-      />
-      <div
-        className="blob bg-mint/40 w-72 h-72 top-1/3 -right-24"
-        aria-hidden="true"
-      />
+    <main className="relative min-h-screen flex justify-center px-4 py-12 sm:py-16">
 
       <div className="relative w-full max-w-[400px] flex flex-col items-center">
         <div className="animate-fade-in-up flex flex-col items-center">
-          <ProfilePhoto src={profile.photo} size={200} variant="portrait" glow />
+          <ProfilePhoto src={profile.photo} size={200} variant="portrait" />
 
           <h1 className="mt-5 text-2xl font-bold text-ink text-center">
             {profile.name}
@@ -68,9 +60,9 @@ export default function LinksPage() {
         <div className="mt-8 w-full flex flex-col gap-3">
           {links.map(({ icon: Icon, title, subtitle, href, external }, i) => {
             const content = (
-              <div className="group flex items-center gap-4 w-full bg-white rounded-2xl shadow-sm hover:shadow-[0_12px_28px_-10px_rgba(47,158,90,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm transition-all duration-200 px-4 py-3 min-h-[64px]">
-                <span className="flex-shrink-0 w-11 h-11 rounded-xl bg-sage/60 flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-hover:bg-sage/90">
-                  <Icon className="w-5 h-5 text-green-dark" />
+              <div className="group glass flex items-center gap-4 w-full rounded-2xl shadow-[0_8px_24px_-12px_rgba(17,17,17,0.18)] hover:shadow-[0_16px_36px_-12px_rgba(47,158,90,0.45)] hover:border-green/45 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 px-4 py-3 min-h-[64px]">
+                <span className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-green to-mint shadow-[0_4px_14px_-4px_rgba(47,158,90,0.6)] flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3">
+                  <Icon className="w-5 h-5 text-white" />
                 </span>
                 <span className="flex flex-col text-left min-w-0">
                   <span className="font-bold text-ink text-base truncate">

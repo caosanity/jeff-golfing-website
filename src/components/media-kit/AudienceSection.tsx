@@ -9,7 +9,7 @@ const { audience } = siteConfig;
 const CHART_COLORS = ["#18924d", "#257ecc", "#e2754f", "#b75186", "#635bb0"];
 
 const cardClass =
-  "bg-white rounded-2xl p-5 flex flex-col items-center shadow-[0_10px_26px_-16px_rgba(17,17,17,0.18)] hover:shadow-[0_14px_32px_-14px_rgba(17,17,17,0.22)] hover:-translate-y-0.5 transition-all duration-200";
+  "glass rounded-2xl p-5 flex flex-col items-center shadow-[0_10px_26px_-16px_rgba(17,17,17,0.18)] hover:shadow-[0_14px_32px_-14px_rgba(17,17,17,0.22)] hover:border-green/45 hover:-translate-y-0.5 transition-all duration-200";
 
 export default function AudienceSection() {
   return (
@@ -18,7 +18,7 @@ export default function AudienceSection() {
         Audience
       </span>
 
-      <div className="animate-fade-in-up mt-4 bg-cream-green rounded-3xl p-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="animate-fade-in-up mt-4 bg-sage/25 backdrop-blur-md border border-white/40 rounded-3xl p-5 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className={cardClass}>
           <h3 className="self-start text-sm font-bold text-ink mb-2">
             Gender

@@ -8,12 +8,32 @@ html {
 
 body {
   background-color: #f3efe6;
-  background-image:
-    radial-gradient(600px circle at 15% 0%, rgba(191, 227, 199, 0.55), transparent 60%),
-    radial-gradient(500px circle at 100% 20%, rgba(191, 227, 222, 0.45), transparent 55%),
-    linear-gradient(180deg, #f3efe6 0%, #eaf3ea 100%);
-  background-attachment: fixed;
   color: #111111;
+}
+
+/* Tile surfaces — solid white with a soft green-tinted border (shared by
+   every card/tile/pill across the site: link buttons, stat cards, platform
+   cards, audience cards, the partners card, filter tabs, nav drawer) */
+.glass {
+  background: #ffffff;
+  border: 1px solid rgba(47, 158, 90, 0.22);
+}
+
+.glass-strong {
+  background: #ffffff;
+  border: 1px solid rgba(47, 158, 90, 0.28);
+}
+
+.glass-pill {
+  background: #ffffff;
+  border: 1px solid rgba(47, 158, 90, 0.22);
+}
+
+.glass-dark {
+  background: rgba(17, 17, 17, 0.45);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Hide scrollbar for horizontally-scrollable rows (filter tabs, partner logos) */
