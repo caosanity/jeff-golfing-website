@@ -9,26 +9,40 @@ export default function PartnersSection() {
         Partners
       </span>
 
-      <div className="mt-4 flex gap-3 overflow-x-auto no-scrollbar scroll-fade-right md:grid md:grid-cols-6 md:overflow-visible md:[mask-image:none] md:[-webkit-mask-image:none]">
-        {partners.map(({ name, logo }) => (
-          <div
-            key={name}
-            className="flex-shrink-0 md:flex-shrink bg-white rounded-2xl shadow-sm hover:shadow-[0_14px_28px_-14px_rgba(17,17,17,0.25)] hover:-translate-y-0.5 transition-all duration-200 px-5 py-4 flex items-center justify-center min-w-[140px] md:min-w-0"
-          >
-            {logo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={logo}
-                alt={name}
-                className="max-h-8 w-auto object-contain grayscale opacity-80"
-              />
-            ) : (
-              <span className="text-sm font-bold text-muted grayscale">
-                {name}
-              </span>
-            )}
-          </div>
-        ))}
+      <div className="animate-fade-in-up bg-white rounded-3xl shadow-[0_16px_36px_-18px_rgba(17,17,17,0.16)] mt-4 p-6 flex flex-wrap items-center justify-start gap-10">
+        {partners.map(({ name, logo, url }) => {
+          const content = logo ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={logo} alt={name} className="h-24 w-auto object-contain" />
+          ) : (
+            <span className="text-lg font-bold text-ink whitespace-nowrap">
+              {name}
+            </span>
+          );
+
+          const className =
+            "flex items-center justify-center transition-transform duration-200 hover:scale-105";
+
+          if (url) {
+            return (
+              <a
+                key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {content}
+              </a>
+            );
+          }
+
+          return (
+            <div key={name} className={className}>
+              {content}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

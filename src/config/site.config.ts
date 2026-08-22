@@ -21,7 +21,7 @@ const siteConfig = {
 
     // Partners section in the Media Kit. Set to true once there are real
     // partner logos to show.
-    showPartners: false,
+    showPartners: true,
 
     // "Places" filter tab and posts in Featured Posts. Set to true to bring
     // course/location posts back into the grid.
@@ -115,14 +115,15 @@ const siteConfig = {
   // PARTNERS — add, remove, or reorder freely. This is partner1, partner2,
   // partner3... as a list, so there's no limit on how many you add.
   // Set "logo" to a path in /public to show an image instead of the name.
+  // Set "url" to the partner's website to make the logo clickable (opens in
+  // a new tab). Leave "" to keep it non-clickable.
   // --------------------------------------------------------------------------
   partners: [
-    { name: "TourGrip", logo: "" }, // partner1
-    { name: "FairwayCo", logo: "" }, // partner2
-    { name: "LinksWear", logo: "" }, // partner3
-    { name: "BirdieBrand", logo: "" },
-    { name: "CaddieClub", logo: "" },
-    { name: "GreenSide", logo: "" },
+    {
+      name: "SwingPop Golf",
+      logo: "/Swing_Logo_Dark_Green.jpg",
+      url: "https://swingpopgolf.com/",
+    }, // partner1
   ],
 
   // --------------------------------------------------------------------------
