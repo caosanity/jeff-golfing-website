@@ -124,6 +124,11 @@ const siteConfig = {
       logo: "/Swing_Logo_Dark_Green.jpg",
       url: "https://swingpopgolf.com/",
     }, // partner1
+    {
+      name: "Golf Links",
+      logo: "/golflinks-logo-header.png",
+      url: "https://golflinks.ca/",
+    }, // partner2
   ],
 
   // --------------------------------------------------------------------------
