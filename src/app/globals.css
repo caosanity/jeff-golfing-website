@@ -9,6 +9,10 @@ html {
 body {
   background-color: #f3efe6;
   color: #111111;
+  /* Safety net: intentional horizontal scroll (filter tabs, partner marquee)
+     is always scoped to its own row — the page itself should never scroll
+     sideways, even if a descendant briefly miscalculates its width. */
+  overflow-x: hidden;
 }
 
 /* Tile surfaces — solid white with a soft green-tinted border (shared by
@@ -49,6 +53,32 @@ body {
 .scroll-fade-right {
   mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
   -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
+}
+
+/* Fade both edges of a continuously auto-scrolling row (marquee) */
+.scroll-fade-x {
+  mask-image: linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+}
+
+/* Continuous left-to-right auto-scroll for a row of duplicated content */
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-ltr 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }
 
 /* Decorative blurred color blob used behind hero/profile content */

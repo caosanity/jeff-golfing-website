@@ -117,6 +117,8 @@ const siteConfig = {
   // Set "logo" to a path in /public to show an image instead of the name.
   // Set "url" to the partner's website to make the logo clickable (opens in
   // a new tab). Leave "" to keep it non-clickable.
+  // Set "logoHeight" to shrink/grow just that one logo (in px). Leave unset
+  // to use the default size (96px).
   // --------------------------------------------------------------------------
   partners: [
     {
@@ -129,7 +131,18 @@ const siteConfig = {
       logo: "/golflinks-logo-header.png",
       url: "https://golflinks.ca/",
     }, // partner2
-  ],
+    {
+      name: "Groove It",
+      logo: "/grooveit.png",
+      url: "https://grooveitbrush.com/",
+      logoHeight: 56,
+    }, // partner3
+    {
+      name: "Gameday Golf Gear",
+      logo: "/gameday.jpg",
+      url: "https://www.gamedaygolfgear.com/",
+    }, // partner4
+  ] as Partner[],
 
   // --------------------------------------------------------------------------
   // FEATURED POSTS — add, remove, or reorder freely.
@@ -220,6 +233,13 @@ export type FeaturedPost = {
   title: string;
   image: string;
   videoUrl: string;
+};
+
+export type Partner = {
+  name: string;
+  logo: string;
+  url: string;
+  logoHeight?: number;
 };
 
 export default siteConfig;
