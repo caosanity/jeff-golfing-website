@@ -55,7 +55,7 @@ export default function FeaturedPosts() {
               onClick={() => setActive(filter)}
               className={`flex-shrink-0 rounded-full px-4 py-2 text-sm font-semibold border transition-all duration-200 ${
                 isActive
-                  ? "bg-gradient-to-r from-green to-green-dark text-white border-transparent shadow-[0_8px_18px_-6px_rgba(47,158,90,0.65)]"
+                  ? "bg-gradient-to-r from-green to-green-dark text-white border-transparent"
                   : "glass-pill text-muted hover:text-green-dark hover:border-green/45"
               }`}
             >
