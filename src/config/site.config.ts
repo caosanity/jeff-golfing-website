@@ -93,8 +93,9 @@ const siteConfig = {
     heading: "Small account. Real results.",
     points: [
       {
-        title: "Higher engagement than large accounts",
-        description: "smaller audiences are more loyal and responsive",
+        title: "Stronger engagement",
+        description:
+          "smaller, highly targeted audiences are typically more loyal and responsive than those of larger accounts",
       },
       {
         title: "UGC rights included",
@@ -107,7 +108,7 @@ const siteConfig = {
       },
       {
         title: "Authentic voice",
-        description: "my audience trusts me because I'm genuinely one of them",
+        description: "a golf customer myself that is always looking for the next golf find",
       },
     ],
   },
