@@ -41,7 +41,7 @@ const siteConfig = {
     niche: "Golf Content Creator",
 
     // Path to your profile photo in /public. Leave "" to show initials instead.
-    photo: "/IMG_9043.jpeg",
+    photo: "/profile-photo.jpg",
 
     // Short description — shown on the Links page under your name
     description: "Sharing my golf adventures from beautiful courses around the world to hidden gem golf accesory finds for golfers of all levels to enjoy and relate to!⛳️",
@@ -140,8 +140,8 @@ const siteConfig = {
   // ageGroups / viewerLocation / followerLocation percentages should each add up to 100.
   // --------------------------------------------------------------------------
   audience: {
-    malePercentage: 82,
-    femalePercentage: 18,
+    malePercentage: 81,
+    femalePercentage: 19,
 
     ageGroups: [
       { label: "18-24", percentage: 27.4 },
@@ -152,19 +152,19 @@ const siteConfig = {
     ],
 
     viewerLocation: [
-      { label: "Canada", percentage: 41.3 },
-      { label: "United States", percentage: 28.3 },
-      { label: "Australia", percentage: 6.5 },
-      { label: "United Kingdom", percentage: 5.4 },
-      { label: "Other", percentage: 18.5 },
+      { label: "Canada", percentage: 46.1 },
+      { label: "United States", percentage: 26 },
+      { label: "Australia", percentage: 6 },
+      { label: "United Kingdom", percentage: 4.9 },
+      { label: "Other", percentage: 17 },
     ],
 
     followerLocation: [
-      { label: "United States", percentage: 27.3 },
-      { label: "Canada", percentage: 17.2 },
-      { label: "United Kingdom", percentage: 9.2 },
-      { label: "Australia", percentage: 4.0 },
-      { label: "Other", percentage: 42.3 },
+      { label: "United States", percentage: 27.1 },
+      { label: "Canada", percentage: 18.8 },
+      { label: "United Kingdom", percentage: 8.9 },
+      { label: "Australia", percentage: 4.2 },
+      { label: "Other", percentage: 41 },
     ],
   },
 
