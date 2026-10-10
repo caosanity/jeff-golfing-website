@@ -29,6 +29,12 @@ export default function ProfileCard() {
       >
         Contact for collabs
       </a>
+      <a
+        href={`mailto:${profile.email}`}
+        className="relative mt-3 text-sm text-muted hover:text-green-dark transition-colors break-all"
+      >
+        {profile.email}
+      </a>
     </div>
   );
 }
