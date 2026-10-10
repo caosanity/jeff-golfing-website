@@ -6,7 +6,13 @@ import type { PostCategory } from "@/config/site.config";
 
 const { featuredPosts, visibility } = siteConfig;
 
-const ALL_FILTERS: (PostCategory | "All")[] = ["All", "Products", "Play", "Places"];
+const ALL_FILTERS: (PostCategory | "All")[] = [
+  "All",
+  "Partnerships",
+  "Products",
+  "Play",
+  "Places",
+];
 const HIDDEN_CATEGORIES: PostCategory[] = [
   ...(visibility.showPlayPosts ? [] : (["Play"] as PostCategory[])),
   ...(visibility.showPlacesPosts ? [] : (["Places"] as PostCategory[])),
@@ -58,6 +64,12 @@ export default function FeaturedPosts() {
           );
         })}
       </div>
+
+      {posts.length === 0 && (
+        <p className="mt-4 rounded-2xl glass p-6 text-center text-sm text-muted">
+          No posts here yet. Check back soon!
+        </p>
+      )}
 
       <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
         {posts.map((post, index) => {

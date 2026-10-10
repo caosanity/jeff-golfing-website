@@ -12,27 +12,11 @@ export default function InsightsSection() {
       </span>
 
       <div className="mt-4 flex flex-col gap-4">
-        {visibility.showInstagram && (
-          <PlatformCard
-            icon={InstagramIcon}
-            handle={profile.instagramHandle}
-            href={profile.instagramUrl}
-            stats={[
-              { label: "Followers", value: instagram.followers },
-              {
-                label: "Avg engagement",
-                value: instagram.avgEngagement,
-                tooltip: "Average engagement rate across recent posts",
-              },
-              { label: "Avg views", value: instagram.avgViews },
-              { label: "Avg likes", value: instagram.avgLikes },
-            ]}
-          />
-        )}
         <PlatformCard
           icon={TikTokIcon}
           handle={profile.tiktokHandle}
           href={profile.tiktokUrl}
+          note={tiktok.note}
           stats={[
             { label: "Followers", value: tiktok.followers },
             { label: "Total views", value: tiktok.totalViews },
@@ -40,6 +24,19 @@ export default function InsightsSection() {
             { label: "Total shares", value: tiktok.totalShares },
           ]}
         />
+        {visibility.showInstagram && (
+          <PlatformCard
+            icon={InstagramIcon}
+            handle={profile.instagramHandle}
+            href={profile.instagramUrl}
+            note={instagram.note}
+            stats={[
+              { label: "Followers", value: instagram.followers },
+              { label: "Total views", value: instagram.totalViews },
+              { label: "Interactions", value: instagram.interactions },
+            ]}
+          />
+        )}
       </div>
     </section>
   );

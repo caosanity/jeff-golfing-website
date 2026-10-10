@@ -17,7 +17,7 @@ const siteConfig = {
   visibility: {
     // Instagram stats card in the Media Kit's Insights & Data section.
     // Set to true once Instagram follower count is worth showing off.
-    showInstagram: false,
+    showInstagram: true,
 
     // Partners section in the Media Kit. Set to true once there are real
     // partner logos to show.
@@ -59,23 +59,80 @@ const siteConfig = {
   },
 
   // --------------------------------------------------------------------------
-  // INSTAGRAM STATS — SAMPLE DATA, replace with real analytics
+  // PARTNERSHIP FORMATS — shown under the Media Kit profile card.
+  // Numbered 01, 02, 03... automatically in the order listed.
+  // --------------------------------------------------------------------------
+  partnershipFormats: [
+    {
+      title: "UGC Videos",
+      description:
+        "High-quality short-form video assets you own outright. Use them in paid ads, email, or any channel.",
+    },
+    {
+      title: "Affiliate Partnerships",
+      description:
+        "Commission-based deals with trackable links: low risk, performance-driven, fully measurable.",
+    },
+    {
+      title: "Product Testing",
+      description:
+        "On-course demos and honest reviews. Real feedback from someone who actually uses the gear.",
+    },
+    {
+      title: "Content Packages",
+      description:
+        "Multi-piece short-form bundles for product launches or seasonal campaigns. Delivered fast.",
+    },
+  ],
+
+  // --------------------------------------------------------------------------
+  // WHY PARTNER — shown under Partnership Formats
+  // --------------------------------------------------------------------------
+  whyPartner: {
+    eyebrow: "Why partner with a micro-creator",
+    heading: "Small account. Real results.",
+    points: [
+      {
+        title: "Higher engagement than large accounts",
+        description: "smaller audiences are more loyal and responsive",
+      },
+      {
+        title: "UGC rights included",
+        description:
+          "keep the content and repurpose it across paid ads, email, and your own socials",
+      },
+      {
+        title: "Early-stage pricing",
+        description: "get in before the audience (and rates) scale",
+      },
+      {
+        title: "Authentic voice",
+        description: "my audience trusts me because I'm genuinely one of them",
+      },
+    ],
+  },
+
+  // --------------------------------------------------------------------------
+  // INSTAGRAM STATS
   // --------------------------------------------------------------------------
   instagram: {
-    followers: "42.3K",
-    avgEngagement: "6.8%",
-    avgViews: "18.2K",
-    avgLikes: "2,940",
+    // Small text shown beside the Instagram handle
+    note: "Account Created: August 2026",
+    followers: "220",
+    totalViews: "155K",
+    interactions: "6.3K",
   },
 
   // --------------------------------------------------------------------------
   // TIKTOK STATS
   // --------------------------------------------------------------------------
   tiktok: {
-    followers: "1,160",
-    totalViews: "2.4M",
-    totalLikes: "106K",
-    totalShares: "24.6K",
+    // Small text shown beside the TikTok handle
+    note: "Account Created: January 2026",
+    followers: "1,220",
+    totalViews: "2.7M",
+    totalLikes: "115K",
+    totalShares: "25.4K",
   },
 
   // --------------------------------------------------------------------------
@@ -142,18 +199,56 @@ const siteConfig = {
       logo: "/gameday.jpg",
       url: "https://www.gamedaygolfgear.com/",
     }, // partner4
+    {
+      name: "dadafunk",
+      logo: "/dadafunklogo.jpg",
+      url: "https://dadafunk.com/",
+      logoHeight: 40,
+    }, // partner5
   ] as Partner[],
 
   // --------------------------------------------------------------------------
   // FEATURED POSTS — add, remove, or reorder freely.
   // platform must be "Instagram" or "TikTok"
-  // category must be "Products", "Play", or "Places"
+  // category must be "Partnerships", "Products", "Play", or "Places"
   // Set "image" to a path in /public to show a real thumbnail instead of the
   // placeholder color background.
   // Set "videoUrl" to the real post URL (e.g. "https://www.tiktok.com/@jeffgolfing/video/1234567890")
   // to make the tile clickable — it opens the real post in a new tab. Leave "" to keep it non-clickable.
   // --------------------------------------------------------------------------
   featuredPosts: [
+    // Partnership post: Silver Brooke Golf Club
+    {
+      platform: "TikTok",
+      category: "Partnerships",
+      title: "Best value championship course in the GTA?",
+      image: "/tiktok-silver-brooke.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7680962798930726151",
+    },
+    // Partnership post: South Ajax
+    {
+      platform: "TikTok",
+      category: "Partnerships",
+      title: "Best Friday night spot in the GTA?",
+      image: "/tiktok-south-ajax.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7684657393707355410",
+    },
+    // Partnership post: dadafunk
+    {
+      platform: "TikTok",
+      category: "Partnerships",
+      title: "Day in the life: weekday edition",
+      image: "/tiktok-dadafunk.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7692442539130932488",
+    },
+    // Places post: Glen Abbey
+    {
+      platform: "TikTok",
+      category: "Places",
+      title: "Glen Abbey: course review",
+      image: "/tiktok-glen-abbey.jpg",
+      videoUrl: "https://www.tiktok.com/@jeffgolfing/video/7693514965759577351",
+    },
     // TikTok post 1
     {
       platform: "TikTok",
@@ -225,7 +320,7 @@ const siteConfig = {
 // Types (no need to edit below this line)
 // --------------------------------------------------------------------------
 export type Platform = "Instagram" | "TikTok";
-export type PostCategory = "Products" | "Play" | "Places";
+export type PostCategory = "Partnerships" | "Products" | "Play" | "Places";
 
 export type FeaturedPost = {
   platform: Platform;

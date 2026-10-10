@@ -5,7 +5,7 @@ const { profile } = siteConfig;
 
 export default function ProfileCard() {
   return (
-    <div className="animate-fade-in-up glass-strong relative overflow-hidden rounded-3xl shadow-[0_20px_45px_-20px_rgba(17,17,17,0.2)] p-6 flex flex-col items-center text-center md:sticky md:top-6">
+    <div className="animate-fade-in-up glass-strong relative overflow-hidden rounded-3xl shadow-[0_20px_45px_-20px_rgba(17,17,17,0.2)] p-6 flex flex-col items-center text-center">
       <div className="relative">
         <ProfilePhoto src={profile.photo} size={180} variant="portrait" />
       </div>
