@@ -64,9 +64,9 @@ const siteConfig = {
   // --------------------------------------------------------------------------
   partnershipFormats: [
     {
-      title: "UGC Videos",
+      title: "UGC Videos/Carousel",
       description:
-        "High-quality short-form video assets you own outright. Use them in paid ads, email, or any channel.",
+        "High-quality short-form video/carousel assets you own outright. Use them in paid ads, email, or any channel.",
     },
     {
       title: "Affiliate Partnerships",
@@ -74,7 +74,7 @@ const siteConfig = {
         "Commission-based deals with trackable links: low risk, performance-driven, fully measurable.",
     },
     {
-      title: "Product Testing",
+      title: "Product Reviews",
       description:
         "On-course demos and honest reviews. Real feedback from someone who actually uses the gear.",
     },
