@@ -5,12 +5,20 @@ import {
   TikTokIcon,
   SparkleIcon,
   MailIcon,
+  ShoppingBagIcon,
 } from "@/components/Icons";
 import siteConfig from "@/config/site.config";
 
 const { profile } = siteConfig;
 
 const links = [
+  {
+    icon: ShoppingBagIcon,
+    title: "Tokyo Golf Shopping Guide",
+    subtitle: "Digital guide · Buy on Etsy",
+    href: "https://www.etsy.com/ca/listing/4592899691/tokyo-golf-shopping-guide-four-golf",
+    external: true,
+  },
   {
     icon: TikTokIcon,
     title: "TikTok",
